@@ -1,0 +1,80 @@
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>;-; I cri everytim</title>
+<style type="text/css">
+body {
+	/* [disabled]background-image: url(2.gif); */
+	background-repeat: repeat;
+	background-color: #000;
+}
+body,td,th {
+	font-size: 36px;
+	color: #798C91;
+	alignment-adjust: central;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+
+    CountDownTimer('12/05/2016 00:1 AM', 'countdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'REV UP THE ENGINE!?!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + ' days ';
+            document.getElementById(id).innerHTML += hours + ' hrs ';
+            document.getElementById(id).innerHTML += minutes + ' mins ';
+            document.getElementById(id).innerHTML += seconds + ' secs';
+        }
+
+        timer = setInterval(showRemaining, 100);
+    }
+
+</script>
+
+<div id="image" align="center">
+  <p>Days until Mark gets back online</p>
+</div>
+<div id="image" align="center">
+  <p> <img src="1446084486135.gif" width="606" height="452"> </p>
+</div>
+<div id="countdown" align="center"></div>
+
+<div id="Song">
+<p align="center">
+<audio controls autoplay loop>
+<source src="Good Night.mp3" type="audio/ogg">
+</audio>
+</p>
+</div>
+</body>
+</html>
